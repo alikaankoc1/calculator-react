@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-
-
-
-
+import "./Calculator.css";
 const Calculator = () => {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
@@ -10,10 +7,8 @@ const Calculator = () => {
   const handleButtonClick = (value) => {
     if (value === "=") {
       try {
-       
         setResult(eval(input).toString());
       } catch {
-       
         setResult("Hata");
       }
     } else if (value === "AC") {
