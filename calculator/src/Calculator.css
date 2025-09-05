@@ -29,13 +29,19 @@
   font-weight: bold;
 }
 
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.buttons-container {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
-.buttons button {
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row button {
+  flex-grow: 1; /* Butonların eşit genişlikte olmasını sağlar */
   background-color: #555;
   color: white;
   border: none;
@@ -46,7 +52,7 @@
   transition: background-color 0.2s;
 }
 
-.buttons button:hover {
+.row button:hover {
   background-color: #666;
 }
 
@@ -68,12 +74,4 @@
 .btn-operator:hover,
 .btn-equals:hover {
   background-color: #ffa520;
-}
-
-.btn-equals {
-  grid-column: span 2;
-}
-
-.btn-zero {
-  grid-column: span 2;
 }
